@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Gun Shooting Game</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <!-- Landing Page -->
+  <div id="landingPage">
+    <h1>Gun Shooting Game</h1>
+    <button id="startBtn">Start Game</button>
+  </div>
+
+  <!-- Game Area -->
+  <div id="gameContainer" style="display: none;">
+    <audio id="shootSound" src="assets/shoot.mp3" preload="auto"></audio>
+    <div id="score">Score: 0</div>
+    <div id="player">
+      <img src="assets/player.png" class="player-sprite">
+      <div class="barrel"></div>
+    </div>
+    <audio id="shootSound" src="assets/shoot.mp3" preload="auto"></audio>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

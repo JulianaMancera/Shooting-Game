@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+/* Landing Page */
+#landingPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: #111;
+  color: white;
+}
+
+#startBtn {
+  padding: 10px 20px;
+  font-size: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  background: #2ecc71;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Game Container */
+#gameContainer {
+  width: 100vw;
+  height: 100vh;
+  background: url('assets/background.png') repeat;
+  position: relative;
+}
+
+/* Player and Barrel */
+#player {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+
+.player-sprite {
+  width: 30px;
+  height: 30px;
+  image-rendering: pixelated;
+}
+
+.barrel {
+  position: absolute;
+  width: 20px;
+  height: 6px;
+  background: black;
+  top: 12px;
+  left: 15px;
+  transform-origin: left center;
+}
+
+/* Bullets */
+.bullet {
+  width: 6px;
+  height: 6px;
+  background: yellow;
+  position: absolute;
+  border-radius: 50%;
+}
+
+/* Smoke */
+.smoke {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(200, 200, 200, 0.5);
+  border-radius: 50%;
+  animation: puff 0.5s ease-out forwards;
+}
+
+@keyframes puff {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+
+/* Enemies */
+.enemy {
+  width: 25px;
+  height: 25px;
+  background: red;
+  position: absolute;
+}
+
+/* Score */
+#score {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: white;
+  font-size: 18px;
+  background: rgba(0,0,0,0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
